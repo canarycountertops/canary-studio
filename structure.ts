@@ -7,6 +7,9 @@ export const structure: StructureResolver = (S) =>
     .title('Canary website')
     .items([
       S.listItem()
+        .title('Site settings')
+        .child(S.document().schemaType('siteSettings').documentId('siteSettings').title('Site settings')),
+      S.listItem()
         .title('Home page')
         .icon(HomeIcon)
         .child(S.document().schemaType('homePage').documentId('homePage').title('Home page')),

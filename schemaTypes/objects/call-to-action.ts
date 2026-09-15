@@ -21,7 +21,7 @@ export const callToAction = defineType({
       validation: (rule) =>
         rule.required().custom((value) => {
           if (!value) return true
-          return /^(\/|mailto:|tel:|https?:\/\/)/.test(value)
+          return /^(\/(?!\/)|mailto:|tel:|https?:\/\/)/.test(value)
             ? true
             : 'Use /path, mailto:, tel:, or a full http(s) URL.'
         }),
