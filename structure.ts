@@ -22,4 +22,6 @@ export const structure: StructureResolver = (S) =>
             .documentId('materialsPage')
             .title('Materials page'),
         ),
+      S.documentTypeListItem('partner').title('Surface partners'),
+      S.documentTypeListItem('surfaceProduct').title('Surface products'),
     ])
